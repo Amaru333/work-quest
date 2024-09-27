@@ -41,4 +41,52 @@ export const COMMON_STRINGS = {
     fr: "S'inscrire",
     hi: "साइन अप करें",
   },
+  jobs: {
+    en: "Jobs",
+    es: "Trabajos",
+    fr: "Emplois",
+    hi: "नौकरियां",
+  },
+  myApplications: {
+    en: "My Applications",
+    es: "Mis aplicaciones",
+    fr: "Mes applications",
+    hi: "मेरे आवेदन",
+  },
+  messages: {
+    en: "Messages",
+    es: "Mensajes",
+    fr: "Messages",
+    hi: "संदेश",
+  },
+  searchJobs: {
+    en: "Search Jobs",
+    es: "Buscar trabajos",
+    fr: "Rechercher des emplois",
+    hi: "नौकरियां खोजें",
+  },
+  profile: {
+    en: "Profile",
+    es: "Perfil",
+    fr: "Profil",
+    hi: "प्रोफ़ाइल",
+  },
+  settings: {
+    en: "Settings",
+    es: "Configuración",
+    fr: "Paramètres",
+    hi: "सेटिंग्स",
+  },
+  changeLanguage: {
+    en: "Change Language",
+    es: "Cambiar idioma",
+    fr: "Changer de langue",
+    hi: "भाषा बदलें",
+  },
+  signOut: {
+    en: "Sign Out",
+    es: "Desconectar",
+    fr: "Se déconnecter",
+    hi: "साइन आउट",
+  },
 };
