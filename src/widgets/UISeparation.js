@@ -1,7 +1,7 @@
 import React from "react";
 import { twMerge } from "tailwind-merge";
 
-function UISeparation({ text, className, color = "gray-400" }) {
+function UISeparation({ text, vertical = false, className, color = "gray-400" }) {
   return (
     <div className={twMerge("flex items-center", className)}>
       <div className={twMerge(`bg-${color} h-px w-full`)}></div>

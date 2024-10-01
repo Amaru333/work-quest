@@ -1,0 +1,32 @@
+[
+  {
+    "objectID": "1",
+    "name": {
+      "en": "On Site",
+      "es": "En el sitio",
+      "fr": "Sur site",
+      "hi": "स्थल पर"
+    },
+    "value": "on_site"
+  },
+  {
+    "objectID": "2",
+    "name": {
+      "en": "Remote",
+      "es": "Remoto",
+      "fr": "À distance",
+      "hi": "रिमोट"
+    },
+    "value": "remote"
+  },
+  {
+    "objectID": "3",
+    "name": {
+      "en": "Hybrid",
+      "es": "Híbrido",
+      "fr": "Hybride",
+      "hi": "हाइब्रिड"
+    },
+    "value": "hybrid"
+  }
+]

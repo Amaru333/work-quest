@@ -6,6 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React from "react";
+import { Checkbox } from "../ui/checkbox";
 
 function LoginSignup({ lang, status, setStatus }) {
   const router = useRouter();
@@ -35,9 +36,15 @@ function LoginSignup({ lang, status, setStatus }) {
         </label>
         <input type="password" id="password" name="password" className="mt-1 block w-full px-3 py-2 border border-gray-500 rounded-md shadow-sm focus:ring-primary-100 focus:border-primary-100 sm:text-sm" />
         <div className="mt-4 flex items-center justify-between">
-          <div className="flex items-start">
+          {/* <div className="flex items-start">
             <input type="checkbox" id="remember-me" name="remember-me" className="mt-0.5" />
             <label htmlFor="remember-me" className="ml-1 text-sm font-semibold text-gray-500">
+              {COMMON_STRINGS.rememberMe[lang]}
+            </label>
+          </div> */}
+          <div className="flex items-center space-x-2">
+            <Checkbox id="remember-me" />
+            <label htmlFor="remember-me" className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
               {COMMON_STRINGS.rememberMe[lang]}
             </label>
           </div>

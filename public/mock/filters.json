@@ -1,0 +1,52 @@
+[
+  {
+    "objectID": "1",
+    "name": {
+      "en": "Full Time",
+      "es": "Tiempo completo",
+      "fr": "Temps plein",
+      "hi": "पूर्ण समय"
+    },
+    "value": "full_time"
+  },
+  {
+    "objectID": "2",
+    "name": {
+      "en": "Part Time",
+      "es": "Medio tiempo",
+      "fr": "Temps partiel",
+      "hi": "अर्धकालिक"
+    },
+    "value": "part_time"
+  },
+  {
+    "objectID": "3",
+    "name": {
+      "en": "Internship",
+      "es": "Prácticas",
+      "fr": "Stage",
+      "hi": "इंटर्नशिप"
+    },
+    "value": "internship"
+  },
+  {
+    "objectID": "4",
+    "name": {
+      "en": "Freelancing",
+      "es": "Trabajo independiente",
+      "fr": "Travail indépendant",
+      "hi": "फ्रीलांसिंग"
+    },
+    "value": "freelancing"
+  },
+  {
+    "objectID": "5",
+    "name": {
+      "en": "Volunteering",
+      "es": "Voluntariado",
+      "fr": "Bénévolat",
+      "hi": "स्वयंसेवा"
+    },
+    "value": "volunteering"
+  }
+]

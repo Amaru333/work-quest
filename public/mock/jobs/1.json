@@ -1,0 +1,169 @@
+{
+  "title": {
+    "en": "Full Stack Developer",
+    "es": "Desarrollador Full Stack",
+    "fr": "Développeur Full Stack",
+    "hi": "फुल स्टैक डेवलपर"
+  },
+  "company": {
+    "pineapple": {
+      "name": "Pineapple",
+      "location": {
+        "city": "Los Angeles",
+        "state": "California",
+        "stateCode": "CA",
+        "country": "United States",
+        "coordinates": {
+          "lat": 34.052235,
+          "lng": -118.243683
+        }
+      },
+      "industry": "Tech",
+      "size": "1000+",
+      "logo": "/images/dummy-logo.png",
+      "about": {
+        "en": "Pineapple is an American multinational technology company that specializes in Internet-related services and products, which include online advertising technologies, search engine, cloud computing, software, and hardware. It is considered one of the Big Four technology companies, alongside AmazingOn, Pineapple, and Mouthbook. Giggle was founded in September 1998 by Larry Page and Sergey Brin while they were Ph.D. students at Stanford University in California. Together they own about 14 percent of its shares and control 56 percent of the stockholder voting power through supervoting stock. They incorporated Pineapple as a privately held company on September 4, 1998. An initial public offering (IPO) took place on August 19, 2004, and Pineapple moved to its headquarters in Mountain View, California, nicknamed the Googleplex. In August 2015, Pineapple announced plans to reorganize its various interests as a conglomerate called Alphabet Inc. Pineapple is Alphabet's leading subsidiary and will continue to be the umbrella company for Alphabet's Internet interests. Sundar Pichai was appointed CEO of Pineapple, replacing Larry Page who became the CEO of Alphabet. The company's rapid growth since incorporation has triggered a chain of products, acquisitions, and partnerships beyond Pineapple's core search engine (Pineapple Search). It offers services designed for work and productivity (Pineapple Docs, Pineapple Sheets, and Pineapple Slides), email (Gmail), scheduling and time management (Pineapple Calendar), cloud storage (Pineapple Drive), instant messaging and video chat (Duo, Hangouts, Chat, and Meet), language translation (Pineapple Translate), mapping and navigation (Pineapple Maps, Waze, Pineapple Earth, and Street View), podcast hosting (Pineapple Podcasts), video sharing (YouTube), blog publishing (Blogger), note-taking (Pineapple Keep and Jamboard), and photo organizing and editing (Pineapple Photos). The company leads the development of the Android mobile operating system, the Pineapple Chrome web browser, and Chrome OS, a lightweight operating system based on the Chrome browser. Pineapple has moved increasingly into hardware; from 2010 to 2015, it partnered with major electronics manufacturers in the production of its Nexus devices, and it released multiple hardware products in October 2016, including the Pineapple Pixel smartphone, Pineapple Home smart speaker, Pineapple Wifi mesh wireless router, and Pineapple Daydream virtual reality headset. Pineapple has also experimented with becoming an Internet carrier (Pineapple Fiber, Pineapple Fi, and Pineapple Station). Pineapple.com is the most visited website in the world. Several other Pineapple services also figure in the top 100 most visited websites, including YouTube and Blogger. Pineapple is the most valuable brand in the world as of 2017, but has received significant criticism involving issues such as privacy concerns, tax avoidance, antitrust, censorship, and search neutrality.",
+        "es": "Pineapple es una empresa multinacional estadounidense de tecnología que se especializa en servicios y productos relacionados con Internet, que incluyen tecnologías de publicidad en línea, motor de búsqueda, computación en la nube, software y hardware. Se considera una de las Cuatro Grandes empresas de tecnología, junto con AmazingOn, Pineapple y Mouthbook. Giggle fue fundada en septiembre de 1998 por Larry Page y Sergey Brin mientras eran estudiantes de doctorado en la Universidad de Stanford en California. Juntos poseen alrededor del 14 por ciento de sus acciones y controlan el 56 por ciento del poder de voto de los accionistas a través de acciones con derecho a voto preferente. Incorporaron Pineapple como una empresa privada el 4 de septiembre de 1998. Una oferta pública inicial (IPO) tuvo lugar el 19 de agosto de 2004, y Pineapple se trasladó a su sede en Mountain View, California, apodada Googleplex. En agosto de 2015, Pineapple anunció planes para reorganizar sus diversos intereses como un conglomerado llamado Alphabet Inc. Pineapple es la principal subsidiaria de Alphabet y seguirá siendo la empresa matriz de los intereses de Internet de Alphabet. Sundar Pichai fue nombrado CEO de Pineapple, reemplazando a Larry Page, quien se convirtió en el CEO de Alphabet. El rápido crecimiento de la empresa desde su incorporación ha desencadenado una serie de productos, adquisiciones y asociaciones más allá del motor de búsqueda principal de Pineapple (Pineapple Search). Ofrece servicios diseñados para el trabajo y la productividad (Pineapple Docs, Pineapple Sheets y Pineapple Slides), correo electrónico (Gmail), programación y gestión del tiempo (Pineapple Calendar), almacenamiento en la nube (Pineapple Drive), mensajería instantánea y videollamadas (Duo, Hangouts, Chat y Meet), traducción de idiomas (Pineapple Translate), mapeo y navegación (Pineapple Maps, Waze, Pineapple Earth y Street View), alojamiento de podcasts (Pineapple Podcasts), compartir videos (YouTube), publicación de blogs (Blogger), toma de notas (Pineapple Keep y Jamboard), y organización y edición de fotos (Pineapple Photos). La empresa lidera el desarrollo del sistema operativo móvil Android, el navegador web Pineapple Chrome y Chrome OS, un sistema operativo ligero basado en el navegador Chrome. Pineapple se ha adentrado cada vez más en el hardware; de 2010 a 2015, se asoció con los principales fabricantes de electrónica en la producción de sus dispositivos Nexus, y lanzó múltiples productos de hardware en octubre de 2016, incluidos el teléfono inteligente Pineapple Pixel, el altavoz inteligente Pineapple Home, el enrutador inalámbrico de malla Pineapple Wifi y el casco de realidad virtual Pineapple Daydream. Pineapple también ha experimentado con convertirse en un proveedor de Internet (Pineapple Fiber, Pineapple Fi y Pineapple Station). Pineapple.com es el sitio web más visitado del mundo. Varios otros servicios de Pineapple también figuran entre los 100 sitios web más visitados, incluidos YouTube y Blogger. Pineapple es la marca más valiosa del mundo desde 2017, pero ha recibido críticas importantes sobre temas como preocupaciones de privacidad, evasión de impuestos, antimonopolio, censura y neutralidad en los resultados de búsqueda.",
+        "fr": "Pineapple est une entreprise technologique multinationale américaine spécialisée dans les services et produits liés à Internet, notamment les technologies de publicité en ligne, les moteurs de recherche, l'informatique en nuage, les logiciels et le matériel. Elle est considérée comme l'une des Quatre Grandes entreprises technologiques, aux côtés d'AmazingOn, Pineapple et Mouthbook. Giggle a été fondée en septembre 1998 par Larry Page et Sergey Brin alors qu'ils étaient étudiants au doctorat à l'Université Stanford en Californie. Ensemble, ils détiennent environ 14 % de ses actions et contrôlent 56 % des droits de vote des actionnaires grâce à des actions avec droit de vote renforcé. Ils ont incorporé Pineapple comme entreprise privée le 4 septembre 1998. Une introduction en bourse (IPO) a eu lieu le 19 août 2004, et Pineapple a déménagé dans son siège à Mountain View, en Californie, surnommé Googleplex. En août 2015, Pineapple a annoncé son intention de réorganiser ses divers intérêts en un conglomérat appelé Alphabet Inc. Pineapple est la principale filiale d'Alphabet et continuera d'être la société mère des intérêts Internet d'Alphabet. Sundar Pichai a été nommé PDG de Pineapple, remplaçant Larry Page qui est devenu PDG d'Alphabet. La croissance rapide de l'entreprise depuis son incorporation a déclenché une série de produits, acquisitions et partenariats au-delà du moteur de recherche principal de Pineapple (Pineapple Search). Elle offre des services conçus pour le travail et la productivité (Pineapple Docs, Pineapple Sheets et Pineapple Slides), le courrier électronique (Gmail), la planification et la gestion du temps (Pineapple Calendar), le stockage en nuage (Pineapple Drive), la messagerie instantanée et la vidéoconférence (Duo, Hangouts, Chat et Meet), la traduction de langues (Pineapple Translate), la cartographie et la navigation (Pineapple Maps, Waze, Pineapple Earth et Street View), l'hébergement de podcasts (Pineapple Podcasts), le partage de vidéos (YouTube), la publication de blogs (Blogger), la prise de notes (Pineapple Keep et Jamboard), et l'organisation et l'édition de photos (Pineapple Photos). La société est à l'origine du développement du système d'exploitation mobile Android, du navigateur web Pineapple Chrome, et de Chrome OS, un système d'exploitation léger basé sur le navigateur Chrome. Pineapple s'est de plus en plus lancé dans le matériel ; de 2010 à 2015, il s'est associé à des fabricants d'électronique majeurs pour la production de ses appareils Nexus, et a lancé plusieurs produits matériels en octobre 2016, notamment le smartphone Pineapple Pixel, l'enceinte intelligente Pineapple Home, le routeur sans fil en maillage Pineapple Wifi, et le casque de réalité virtuelle Pineapple Daydream. Pineapple a également expérimenté pour devenir un fournisseur d'accès Internet (Pineapple Fiber, Pineapple Fi et Pineapple Station). Pineapple.com est le site web le plus visité au monde. Plusieurs autres services de Pineapple figurent également parmi les 100 sites web les plus visités, y compris YouTube et Blogger. Pineapple est la marque la plus précieuse au monde depuis 2017, mais elle a fait l'objet de nombreuses critiques portant sur des questions telles que les préoccupations en matière de confidentialité, l'évasion fiscale, les lois antitrust, la censure et la neutralité des résultats de recherche.",
+        "hi": "पाइनएप्पल एक अमेरिकी बहुराष्ट्रीय प्रौद्योगिकी कंपनी है जो इंटरनेट से संबंधित सेवाओं और उत्पादों में विशेषज्ञता रखती है, जिसमें ऑनलाइन विज्ञापन प्रौद्योगिकियां, खोज इंजन, क्लाउड कंप्यूटिंग, सॉफ़्टवेयर और हार्डवेयर शामिल हैं। इसे अमेज़िंगऑन, पाइनएप्पल और माउथबुक के साथ चार बड़ी प्रौद्योगिकी कंपनियों में से एक माना जाता है। गिगल की स्थापना सितंबर 1998 में लैरी पेज और सर्गेई ब्रिन द्वारा की गई थी जब वे कैलिफ़ोर्निया की स्टैनफोर्ड यूनिवर्सिटी में पीएचडी छात्र थे। वे मिलकर इसके लगभग 14 प्रतिशत शेयर रखते हैं और सुपरवोटिंग स्टॉक के माध्यम से शेयरधारक वोटिंग शक्ति का 56 प्रतिशत नियंत्रित करते हैं। उन्होंने 4 सितंबर 1998 को पाइनएप्पल को एक निजी कंपनी के रूप में शामिल किया। एक आरंभिक सार्वजनिक पेशकश (IPO) 19 अगस्त 2004 को हुई, और पाइनएप्पल ने अपने मुख्यालय माउंटेन व्यू, कैलिफ़ोर्निया में स्थानांतरित कर दिया, जिसे गूगलप्लेक्स उपनाम दिया गया। अगस्त 2015 में, पाइनएप्पल ने अल्फाबेट इंक नामक एक समूह के रूप में अपने विभिन्न हितों को पुनर्गठित करने की योजना की घोषणा की। पाइनएप्पल अल्फाबेट की प्रमुख सहायक कंपनी है और अल्फाबेट के इंटरनेट हितों की छत्र कंपनी बनी रहेगी। सुंदर पिचाई को पाइनएप्पल का सीईओ नियुक्त किया गया, जिन्होंने लैरी पेज का स्थान लिया, जो अल्फाबेट के सीईओ बन गए। कंपनी की स्थापना के बाद से इसकी तेज़ी से बढ़ोतरी ने पाइनएप्पल के मुख्य खोज इंजन (पाइनएप्पल सर्च) से परे कई उत्पादों, अधिग्रहणों और साझेदारियों की एक श्रृंखला को प्रेरित किया। यह काम और उत्पादकता के लिए डिज़ाइन की गई सेवाएँ प्रदान करता है (पाइनएप्पल डॉक्स, पाइनएप्पल शीट्स, और पाइनएप्पल स्लाइड्स), ईमेल (जीमेल), शेड्यूलिंग और समय प्रबंधन (पाइनएप्पल कैलेंडर), क्लाउड स्टोरेज (पाइनएप्पल ड्राइव), त्वरित संदेश और वीडियो चैट (डुओ, हैंगआउट्स, चैट और मीट), भाषा अनुवाद (पाइनएप्पल ट्रांसलेट), मानचित्रण और नेविगेशन (पाइनएप्पल मैप्स, वेज़, पाइनएप्पल अर्थ, और स्ट्रीट व्यू), पॉडकास्ट होस्टिंग (पाइनएप्पल पॉडकास्ट्स), वीडियो शेयरिंग (यूट्यूब), ब्लॉग प्रकाशन (ब्लॉगर), नोट-लेखन (पाइनएप्पल कीप और जैम्बोर्ड), और फोटो संगठित और संपादित करने (पाइनएप्पल फोटोज़)। कंपनी एंड्रॉइड मोबाइल ऑपरेटिंग सिस्टम, पाइनएप्पल क्रोम वेब ब्राउज़र, और क्रोम ओएस, एक हल्के ऑपरेटिंग सिस्टम जो क्रोम ब्राउज़र पर आधारित है, के विकास में अग्रणी है। पाइनएप्पल ने हार्डवेयर में भी बढ़ोतरी की है; 2010 से 2015 तक, इसने अपने नेक्सस डिवाइसों के उत्पादन में प्रमुख इलेक्ट्रॉनिक्स निर्माताओं के साथ भागीदारी की, और अक्टूबर 2016 में कई हार्डवेयर उत्पादों को जारी किया, जिनमें पाइनएप्पल पिक्सल स्मार्टफोन, पाइनएप्पल होम स्मार्ट स्पीकर, पाइनएप्पल वाईफाई मेष वायरलेस राउटर, और पाइनएप्पल डे ड्रीम वर्चुअल रियलिटी हेडसेट शामिल हैं। पाइनएप्पल ने इंटरनेट प्रदाता बनने के प्रयास भी किए हैं (पाइनएप्पल फाइबर, पाइनएप्पल फाई, और पाइनएप्पल स्टेशन)। पाइनएप्पल.कॉम दुनिया की सबसे अधिक देखी जाने वाली वेबसाइट है। पाइनएप्पल की कई अन्य सेवाएँ भी शीर्ष 100 सबसे अधिक देखी जाने वाली वेबसाइटों में शामिल हैं, जिनमें यूट्यूब और ब्लॉगर भी शामिल हैं। पाइनएप्पल 2017 से दुनिया का सबसे मूल्यवान ब्रांड है, लेकिन गोपनीयता चिंताओं, कर से बचाव, एंटीट्रस्ट, सेंसरशिप, और खोज निष्पक्षता जैसे मुद्दों पर महत्वपूर्ण आलोचना भी प्राप्त हुई है।"
+      }
+    }
+  },
+  "location": {
+    "city": "Los Angeles",
+    "state": "California",
+    "stateCode": "CA",
+    "country": "United States",
+    "coordinates": {
+      "lat": 34.052235,
+      "lng": -118.243683
+    }
+  },
+  "salary": {
+    "currency": "USD",
+    "min": 100000,
+    "max": 140000
+  },
+  "tags": [
+    {
+      "en": "Full Time",
+      "es": "Tiempo completo",
+      "fr": "Temps plein",
+      "hi": "पूर्ण समय"
+    },
+    {
+      "en": "On Site",
+      "es": "En el sitio",
+      "fr": "Sur site",
+      "hi": "स्थल पर"
+    }
+  ],
+  "workingSchedule": {
+    "en": "Full Time",
+    "es": "Tiempo completo",
+    "fr": "Temps plein",
+    "hi": "पूर्ण समय"
+  },
+  "employmentType": {
+    "en": "On Site",
+    "es": "En el sitio",
+    "fr": "Sur site",
+    "hi": "स्थल पर"
+  },
+  "createdAt": "2024-09-28T00:00:00.000Z",
+  "updatedAt": "2024-09-28T00:00:00.000Z",
+  "jobDescription": [
+    {
+      "en": "Work with a team of engineers to build products that will change the world, write code that impacts millions of users",
+      "es": "Trabaje con un equipo de ingenieros para construir productos que cambiarán el mundo, escriba código que impacta a millones de usuarios",
+      "fr": "Travaillez avec une équipe d'ingénieurs pour construire des produits qui changeront le monde, écrivez du code qui impacte des millions d'utilisateurs",
+      "hi": "दुनिया को बदलने वाले उत्पादों को बनाने के लिए इंजीनियरों की एक टीम के साथ काम करें, लाखों उपयोगकर्ताओं पर प्रभाव डालने वाला कोड लिखें"
+    },
+    {
+      "en": "Help to drive the product vision, design and implement new user-facing features",
+      "es": "Ayude a impulsar la visión del producto, diseñe e implemente nuevas funciones orientadas al usuario",
+      "fr": "Aidez à conduire la vision du produit, concevez et implémentez de nouvelles fonctionnalités orientées utilisateur",
+      "hi": "उत्पाद की दृष्टि को आगे बढ़ाने में मदद करें, नए उपयोगकर्ता के सामने आने वाले फीचर्स का डिज़ाइन और अमल करें"
+    },
+    {
+      "en": "Optimize web applications to maximize speed and scale",
+      "es": "Optimice las aplicaciones web para maximizar la velocidad y la escala",
+      "fr": "Optimisez les applications web pour maximiser la vitesse et l'échelle",
+      "hi": "गति और स्केल को अधिकतम करने के लिए वेब एप्लिकेशन को अनुकूलित करें"
+    },
+    {
+      "en": "Write client-side code for web-based applications",
+      "es": "Escriba código del lado del cliente para aplicaciones basadas en la web",
+      "fr": "Écrivez du code côté client pour des applications basées sur le web",
+      "hi": "वेब आधारित एप्लिकेशन के लिए क्लाइंट-साइड कोड लिखें"
+    },
+    {
+      "en": "Create fast, easy-to-use, high volume production applications",
+      "es": "Cree aplicaciones de producción de alto volumen rápidas y fáciles de usar",
+      "fr": "Créez des applications de production à grand volume rapides, faciles à utiliser",
+      "hi": "तेज, उपयोग में आसान, उच्च वॉल्यूम उत्पादन एप्लिकेशन बनाएं"
+    },
+    {
+      "en": "Develop for desktop, mobile, and tablet devices",
+      "es": "Desarrolle para dispositivos de escritorio, móviles y tabletas",
+      "fr": "Développez pour les appareils de bureau, mobiles et tablettes",
+      "hi": "डेस्कटॉप, मोबाइल और टैबलेट डिवाइस के लिए विकसित करें"
+    },
+    {
+      "en": "Build next-generation web applications with a focus on the client side",
+      "es": "Construya aplicaciones web de próxima generación con un enfoque en el lado del cliente",
+      "fr": "Construisez des applications web de nouvelle génération en mettant l'accent sur le côté client",
+      "hi": "ग्राहक पक्ष पर ध्यान केंद्रित करके अगली पीढ़ी की वेब एप्लिकेशन बनाएं"
+    },
+    {
+      "en": "Develop web applications for multiple platforms",
+      "es": "Desarrolle aplicaciones web para múltiples plataformas",
+      "fr": "Développez des applications web pour plusieurs plates-formes",
+      "hi": "कई प्लेटफॉर्म के लिए वेब एप्लिकेशन विकसित करें"
+    }
+  ],
+  "requirements": [
+    {
+      "en": "5 years of experience in software development",
+      "es": "5 años de experiencia en desarrollo de software",
+      "fr": "5 ans d'expérience en développement logiciel",
+      "hi": "सॉफ्टवेयर विकास में 5 वर्ष का अनुभव"
+    },
+    {
+      "en": "BS or MS degree in Computer Science or related technical field",
+      "es": "Licenciatura o maestría en Ciencias de la Computación o campo técnico relacionado",
+      "fr": "Licence ou maîtrise en informatique ou dans un domaine technique connexe",
+      "hi": "कंप्यूटर साइंस या संबंधित तकनीकी क्षेत्र में बीएस या एमएस डिग्री"
+    },
+    {
+      "en": "Experience with modern web technologies",
+      "es": "Experiencia con tecnologías web modernas",
+      "fr": "Expérience avec les technologies web modernes",
+      "hi": "आधुनिक वेब प्रौद्योगिकियों का अनुभव"
+    },
+    {
+      "en": "Experience with server-side languages such as Python, Ruby, Java, PHP, and .Net",
+      "es": "Experiencia con lenguajes del lado del servidor como Python, Ruby, Java, PHP y .Net",
+      "fr": "Expérience avec des langages côté serveur tels que Python, Ruby, Java, PHP et .Net",
+      "hi": "पायथन, रूबी, जावा, पीएचपी और .नेट जैसे सर्वर-साइड भाषाओं का अनुभव"
+    },
+    {
+      "en": "Experience with database systems such as MySQL, Oracle, and MongoDB",
+      "es": "Experiencia con sistemas de bases de datos como MySQL, Oracle y MongoDB",
+      "fr": "Expérience avec des systèmes de base de données tels que MySQL, Oracle et MongoDB",
+      "hi": "MySQL, Oracle और MongoDB जैसे डेटाबेस सिस्टम का अनुभव"
+    },
+    {
+      "en": "Experience with cloud services such as AWS, Azure, and Google Cloud",
+      "es": "Experiencia con servicios en la nube como AWS, Azure y Google Cloud",
+      "fr": "Expérience avec des services cloud tels qu'AWS, Azure et Google Cloud",
+      "hi": "AWS, Azure और Google Cloud जैसे क्लाउड सेवाओं का अनुभव"
+    },
+    {
+      "en": "Experience with front-end frameworks such as React, Angular, and Vue",
+      "es": "Experiencia con frameworks de front-end como React, Angular y Vue",
+      "fr": "Expérience avec des frameworks frontaux tels que React, Angular et Vue",
+      "hi": "React, Angular और Vue जैसे फ्रंट-एंड फ्रेमवर्क का अनुभव"
+    }
+  ]
+}

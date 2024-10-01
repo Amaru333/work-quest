@@ -1,14 +1,9 @@
 "use client";
 
-import UIButton from "@/widgets/UIButton";
-import UISeparation from "@/widgets/UISeparation";
 import Image from "next/image";
-import Link from "next/link";
 import React, { useState } from "react";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 
-import { LANDING_PAGE_STRINGS } from "@/constants/strings/landingPageStrings";
-import { COMMON_STRINGS } from "@/constants/strings/commonStrings";
 import { LANGUAGE_LIST } from "@/constants/languages";
 
 import { useDispatch, useSelector } from "react-redux";

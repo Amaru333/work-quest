@@ -1,0 +1,248 @@
+[
+  {
+    "objectID": "1",
+    "title": {
+      "en": "Front End Developer",
+      "es": "Desarrollador Front End",
+      "fr": "Développeur Front End",
+      "hi": "फ्रंट एंड डेवलपर"
+    },
+    "company": {
+      "slug": "pineapple",
+      "name": "Pineapple",
+      "logo": "/images/dummy-logo.png"
+    },
+    "location": {
+      "city": "San Francisco",
+      "state": "California",
+      "stateCode": "CA",
+      "country": "United States"
+    },
+    "backgroundColor": "#FFCACA",
+    "salary": {
+      "currency": "USD",
+      "min": 80000,
+      "max": 120000
+    },
+    "tags": [
+      {
+        "en": "Full Time",
+        "es": "Tiempo completo",
+        "fr": "Temps plein",
+        "hi": "पूर्ण समय"
+      },
+      {
+        "en": "On Site",
+        "es": "En el sitio",
+        "fr": "Sur site",
+        "hi": "स्थल पर"
+      }
+    ],
+    "createdAt": "2024-09-28T00:00:00.000Z"
+  },
+  {
+    "objectID": "2",
+    "title": {
+      "en": "Back End Developer",
+      "es": "Desarrollador Back End",
+      "fr": "Développeur Back End",
+      "hi": "बैक एंड डेवलपर"
+    },
+    "company": {
+      "slug": "banana",
+      "name": "Banana",
+      "logo": "/images/dummy-logo.png"
+    },
+    "location": {
+      "city": "New York",
+      "state": "New York",
+      "stateCode": "NY",
+      "country": "United States"
+    },
+    "backgroundColor": "#CBFFD9",
+    "salary": {
+      "currency": "USD",
+      "min": 90000,
+      "max": 130000
+    },
+    "tags": [
+      {
+        "en": "Part Time",
+        "es": "Medio tiempo",
+        "fr": "Temps partiel",
+        "hi": "अर्धकालिक"
+      },
+      {
+        "en": "Remote",
+        "es": "Remoto",
+        "fr": "À distance",
+        "hi": "रिमोट"
+      }
+    ],
+    "createdAt": "2024-09-27T19:12:32.000Z"
+  },
+  {
+    "objectID": "3",
+    "title": {
+      "en": "Full Stack Developer",
+      "es": "Desarrollador Full Stack",
+      "fr": "Développeur Full Stack",
+      "hi": "फुल स्टैक डेवलपर"
+    },
+    "company": {
+      "slug": "internetflix",
+      "name": "Internetflix",
+      "logo": "/images/dummy-logo.png"
+    },
+    "location": {
+      "city": "Los Angeles",
+      "state": "California",
+      "stateCode": "CA",
+      "country": "United States"
+    },
+    "backgroundColor": "#CADCFF",
+    "salary": {
+      "currency": "USD",
+      "min": 100000,
+      "max": 140000
+    },
+    "tags": [
+      {
+        "en": "Internship",
+        "es": "Prácticas",
+        "fr": "Stage",
+        "hi": "इंटर्नशिप"
+      },
+      {
+        "en": "Hybrid",
+        "es": "Híbrido",
+        "fr": "Hybride",
+        "hi": "हाइब्रिड"
+      }
+    ],
+    "createdAt": "2024-09-26T12:00:00.000Z"
+  },
+  {
+    "objectID": "4",
+    "title": {
+      "en": "UI/UX Designer",
+      "es": "Diseñador UI/UX",
+      "fr": "Designer UI/UX",
+      "hi": "यूआई/यूएक्स डिजाइनर"
+    },
+    "company": {
+      "slug": "pineapple",
+      "name": "Pineapple",
+      "logo": "/images/dummy-logo.png"
+    },
+    "location": {
+      "city": "San Francisco",
+      "state": "California",
+      "stateCode": "CA",
+      "country": "United States"
+    },
+    "backgroundColor": "#F7FFCA",
+    "salary": {
+      "currency": "USD",
+      "min": 80000,
+      "max": 120000
+    },
+    "tags": [
+      {
+        "en": "Freelancing",
+        "es": "Trabajo independiente",
+        "fr": "Travail indépendant",
+        "hi": "फ्रीलांसिंग"
+      },
+      {
+        "en": "On Site",
+        "es": "En el sitio",
+        "fr": "Sur site",
+        "hi": "स्थल पर"
+      }
+    ],
+    "createdAt": "2024-09-25T00:00:00.000Z"
+  },
+  {
+    "objectID": "5",
+    "title": {
+      "en": "Product Manager",
+      "es": "Gerente de Producto",
+      "fr": "Chef de Produit",
+      "hi": "उत्पाद प्रबंधक"
+    },
+    "company": {
+      "slug": "banana",
+      "name": "Banana",
+      "logo": "/images/dummy-logo.png"
+    },
+    "location": {
+      "city": "New York",
+      "state": "New York",
+      "stateCode": "NY",
+      "country": "United States"
+    },
+    "backgroundColor": "#FFCAD9",
+    "salary": {
+      "currency": "USD",
+      "min": 90000,
+      "max": 130000
+    },
+    "tags": [
+      {
+        "en": "Volunteering",
+        "es": "Voluntariado",
+        "fr": "Bénévolat",
+        "hi": "स्वयंसेवा"
+      },
+      {
+        "en": "Remote",
+        "es": "Remoto",
+        "fr": "À distance",
+        "hi": "रिमोट"
+      }
+    ],
+    "createdAt": "2024-09-24T00:00:00.000Z"
+  },
+  {
+    "objectID": "6",
+    "title": {
+      "en": "Data Scientist",
+      "es": "Científico de Datos",
+      "fr": "Scientifique des Données",
+      "hi": "डेटा वैज्ञानिक"
+    },
+    "company": {
+      "slug": "internetflix",
+      "name": "Internetflix",
+      "logo": "/images/dummy-logo.png"
+    },
+    "location": {
+      "city": "Los Angeles",
+      "state": "California",
+      "stateCode": "CA",
+      "country": "United States"
+    },
+    "backgroundColor": "#FFE8CA",
+    "salary": {
+      "currency": "USD",
+      "min": 100000,
+      "max": 140000
+    },
+    "tags": [
+      {
+        "en": "Full Time",
+        "es": "Tiempo completo",
+        "fr": "Temps plein",
+        "hi": "पूर्ण समय"
+      },
+      {
+        "en": "Hybrid",
+        "es": "Híbrido",
+        "fr": "Hybride",
+        "hi": "हाइब्रिड"
+      }
+    ],
+    "createdAt": "2024-09-23T00:00:00.000Z"
+  }
+]
