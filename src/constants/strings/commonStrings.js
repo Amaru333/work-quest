@@ -149,4 +149,10 @@ export const COMMON_STRINGS = {
     fr: "Détails",
     hi: "विवरण",
   },
+  at: {
+    en: "at",
+    es: "en",
+    fr: "à",
+    hi: "पर",
+  },
 };

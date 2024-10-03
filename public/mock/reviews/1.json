@@ -1,0 +1,104 @@
+{
+  "count": 10332,
+  "average": 4.3,
+  "distribution": {
+    "5": 5000,
+    "4": 3000,
+    "3": 1500,
+    "2": 500,
+    "1": 332
+  },
+  "feedbacks": {
+    "time": 8023,
+    "benefit": 5443,
+    "pay": 4323,
+    "environment": 8231
+  },
+  "reviews": [
+    {
+      "_id": "1",
+      "user": {
+        "_id": "1",
+        "name": "John Doe",
+        "avatar": "/images/placeholder-avatar.png"
+      },
+      "rating": 5,
+      "description": "Great company to work for. The benefits are amazing and the work environment is very friendly.",
+      "createdAt": "2024-09-28T00:00:00.000Z",
+      "feedbacks": {
+        "time": true,
+        "benefit": true,
+        "pay": false,
+        "environment": true
+      }
+    },
+    {
+      "_id": "2",
+      "user": {
+        "_id": "2",
+        "name": "Jane Doe",
+        "avatar": "/images/placeholder-avatar.png"
+      },
+      "rating": 4,
+      "description": "Good company to work for. The benefits are good and the work environment is friendly.",
+      "createdAt": "2024-09-27T19:12:32.000Z",
+      "feedbacks": {
+        "time": true,
+        "benefit": false,
+        "pay": false,
+        "environment": true
+      }
+    },
+    {
+      "_id": "3",
+      "user": {
+        "_id": "3",
+        "name": "Alice Doe",
+        "avatar": "/images/placeholder-avatar.png"
+      },
+      "rating": 3,
+      "description": "Average company to work for. The benefits are average and the work environment is average.",
+      "createdAt": "2024-09-27T19:12:32.000Z",
+      "feedbacks": {
+        "time": false,
+        "benefit": true,
+        "pay": false,
+        "environment": true
+      }
+    },
+    {
+      "_id": "4",
+      "user": {
+        "_id": "4",
+        "name": "Bob Doe",
+        "avatar": "/images/placeholder-avatar.png"
+      },
+      "rating": 2,
+      "description": "Bad company to work for. The benefits are bad and the work environment is bad.",
+      "createdAt": "2024-09-27T19:12:32.000Z",
+      "feedbacks": {
+        "time": false,
+        "benefit": false,
+        "pay": true,
+        "environment": false
+      }
+    },
+    {
+      "_id": "5",
+      "user": {
+        "_id": "5",
+        "name": "Eve Doe",
+        "avatar": "/images/placeholder-avatar.png"
+      },
+      "rating": 1,
+      "description": "Terrible company to work for. The benefits are terrible and the work environment is terrible.",
+      "createdAt": "2024-09-27T19:12:32.000Z",
+      "feedbacks": {
+        "time": false,
+        "benefit": false,
+        "pay": false,
+        "environment": false
+      }
+    }
+  ]
+}

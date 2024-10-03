@@ -3,7 +3,7 @@ import { COMMON_STRINGS } from "./strings/commonStrings";
 export const NAVBAR_CONSTANTS = [
   {
     name: COMMON_STRINGS.jobs,
-    link: "/home",
+    link: "/jobs",
   },
   {
     name: COMMON_STRINGS.myApplications,

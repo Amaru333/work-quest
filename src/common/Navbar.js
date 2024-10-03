@@ -2,7 +2,7 @@
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
-import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 
 import { NAVBAR_CONSTANTS } from "@/constants/navbarConstants";
 import { COMMON_STRINGS } from "@/constants/strings/commonStrings";
@@ -12,10 +12,13 @@ import Image from "next/image";
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { LANGUAGE_LIST } from "@/constants/languages";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 function Navbar() {
   const dispatch = useDispatch();
-  const { code: lang, name: langName } = useSelector(selectedLanguage);
+  const pathname = usePathname();
+  const { code: lang } = useSelector(selectedLanguage);
 
   const [isLanguageModalOpen, setIsLanguageModalOpen] = React.useState(false);
 
@@ -37,16 +40,21 @@ function Navbar() {
   return (
     <div className="bg-primary-100">
       <div className="flex justify-between items-center max-w-screen-2xl mx-auto py-6 px-8 2xl:px-0">
-        <Image src="/images/logo-small.svg" width={100} height={80} alt="logo" />
+        <Link href="/jobs">
+          <Image src="/images/logo-small.svg" width={100} height={80} alt="logo" />
+        </Link>
         <button className="text-white text-sm bg-primary-300 flex items-center px-3 py-2 rounded-2xl">
           <Image src="/icons/pin-white.svg" width={24} height={24} alt="location" />
           <p className="ml-1">Charlotte, NC</p>
         </button>
         <div className="flex gap-x-6 font-medium">
           {NAVBAR_CONSTANTS.map((item, index) => (
-            <button key={index} className="text-white">
-              {item.name[lang]}
-            </button>
+            <div className="flex flex-col relative">
+              <Link href={item.link} key={index} className="text-white">
+                {item.name[lang]}
+              </Link>
+              {pathname.includes(item.link) && <div className="w-full h-0.5 rounded-full bg-white absolute -bottom-4 left-0"></div>}
+            </div>
           ))}
         </div>
         <div className="flex bg-background rounded-full w-2/5">
