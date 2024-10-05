@@ -1,5 +1,6 @@
 import StoreWrapper from "@/utils/StoreWrapper";
 import "./globals.css";
+import { TooltipProvider } from "@/components/ui/tooltip";
 
 export const metadata = {
   title: "Create Next App",
@@ -10,7 +11,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`antialiased`}>
-        <StoreWrapper>{children}</StoreWrapper>
+        <StoreWrapper>
+          <TooltipProvider delayDuration={100}>{children}</TooltipProvider>
+        </StoreWrapper>
       </body>
     </html>
   );

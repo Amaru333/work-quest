@@ -7,7 +7,7 @@ import ReviewsSection from "./ReviewsSection";
 
 function JobDescriptionSection({ jobDetails, lang }) {
   return (
-    <div className="col-span-8 border-r border-gray-400 pr-8">
+    <div className="col-span-8 border-r border-gray-400 pr-8 pt-4">
       {jobDetails && (
         <div>
           <div className="flex items-center gap-x-8">

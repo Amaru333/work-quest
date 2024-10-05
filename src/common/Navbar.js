@@ -49,7 +49,7 @@ function Navbar() {
         </button>
         <div className="flex gap-x-6 font-medium">
           {NAVBAR_CONSTANTS.map((item, index) => (
-            <div className="flex flex-col relative">
+            <div className="flex flex-col relative" key={index}>
               <Link href={item.link} key={index} className="text-white">
                 {item.name[lang]}
               </Link>

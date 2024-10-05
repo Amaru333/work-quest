@@ -6,6 +6,7 @@ import React, { useEffect, useState } from "react";
 import JobDescriptionSection from "./JobDescriptionSection";
 import { useSelector } from "react-redux";
 import { selectLanguageCode } from "@/redux/slices/languageSlice";
+import JobLocation from "./JobLocation";
 
 function IndividualJobPage() {
   const { jobSlug } = useParams();
@@ -24,6 +25,7 @@ function IndividualJobPage() {
   return (
     <div className="max-w-screen-2xl mx-auto grid grid-cols-12 px-8 2xl:px-0 py-12">
       <JobDescriptionSection jobDetails={jobDetails} lang={lang} />
+      <JobLocation jobDetails={jobDetails} lang={lang} />
     </div>
   );
 }

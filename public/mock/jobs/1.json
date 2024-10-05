@@ -8,6 +8,7 @@
   "company": {
     "name": "Pineapple",
     "slug": "pineapple",
+    "avgRating": 4.5,
     "location": {
       "city": "Los Angeles",
       "state": "California",
