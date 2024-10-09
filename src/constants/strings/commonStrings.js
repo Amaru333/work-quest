@@ -155,4 +155,10 @@ export const COMMON_STRINGS = {
     fr: "à",
     hi: "पर",
   },
+  submit: {
+    en: "Submit",
+    es: "Enviar",
+    fr: "Soumettre",
+    hi: "प्रस्तुत करें",
+  },
 };
