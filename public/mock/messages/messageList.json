@@ -1,0 +1,65 @@
+[
+  {
+    "_id": "5f5b3b3b1b3e3b3b3b3b3b3b",
+    "recent_message": {
+      "message": "Hey John Doe, how are you doing today? We have received your application and we are happy to inform you that you have been selected for the interview. Please let us know your availability for the interview.",
+      "sender": {
+        "type": "company",
+        "user": {
+          "_id": "5f5b3b3b1b3e3b3b3b3b3b3c",
+          "name": "Pineapple"
+        }
+      },
+      "timestamp": "2024-10-03T10:00:00.000Z"
+    },
+    "unread_count": 3,
+    "to": {
+      "_id": "5f5b3b3b1b3e3b3b3b3b3b3c",
+      "name": "Pineapple",
+      "slug": "pineapple",
+      "logo": "/images/dummy-logo.png"
+    }
+  },
+  {
+    "_id": "5f5b3b3b1b3e3b3b3b3b3b4a",
+    "recent_message": {
+      "message": "Hello Switch, I am doing great. Thank you for the opportunity. I am available for the interview on Monday at 10:00 AM.",
+      "sender": {
+        "type": "user",
+        "user": {
+          "_id": "5f5b3b3b1b3e3b3b3b3b3b3d",
+          "name": "John Doe"
+        }
+      },
+      "timestamp": "2024-10-03T10:00:00.000Z"
+    },
+    "unread_count": 0,
+    "to": {
+      "_id": "5f5b3b3b1b3e3b3b3b3b3b4c",
+      "name": "Switch",
+      "slug": "switch",
+      "logo": "/images/dummy-logo.png"
+    }
+  },
+  {
+    "_id": "5f5b3b3b1b3e3b3b3b3b3b4b",
+    "recent_message": {
+      "message": "Great! We will see you on Monday at 10:00 AM. Good luck!",
+      "sender": {
+        "type": "company",
+        "user": {
+          "_id": "5f5b3b3b1b3e3b3b3b3b3b3c",
+          "name": "Pineapple"
+        }
+      },
+      "timestamp": "2024-10-03T10:00:00.000Z"
+    },
+    "unread_count": 0,
+    "to": {
+      "_id": "5f5b3b3b1b3e3b3b3b3b3b3c",
+      "name": "Pineapple",
+      "slug": "pineapple",
+      "logo": "/images/dummy-logo.png"
+    }
+  }
+]

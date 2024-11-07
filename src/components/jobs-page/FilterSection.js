@@ -33,7 +33,7 @@ function FilterSection() {
             .map((_, i) => <CheckBoxSkeleton key={i} />)
         : filters.length > 0 &&
           filters.map((filter) => (
-            <div className="flex items-center space-x-2 mt-2" key={filter?.objectID}>
+            <div className="flex items-center space-x-2 mt-2" key={filter?._id}>
               <Checkbox id={filter?.value} className="peer" />
               <label htmlFor={filter?.value} className="text-sm font-medium text-gray-500 leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 peer-data-[state=checked]:text-primary-100 peer-data-[state=checked]:font-semibold">
                 {filter?.name?.[lang]}
@@ -47,7 +47,7 @@ function FilterSection() {
             .map((_, i) => <CheckBoxSkeleton key={i} />)
         : employmentTypes.length > 0 &&
           employmentTypes.map((employmentType) => (
-            <div className="flex items-center space-x-2 mt-2" key={employmentType?.objectID}>
+            <div className="flex items-center space-x-2 mt-2" key={employmentType?._id}>
               <Checkbox id={employmentType?.value} className="peer" />
               <label htmlFor={employmentType?.value} className="text-sm font-medium text-gray-500 leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 peer-data-[state=checked]:text-primary-100 peer-data-[state=checked]:font-semibold">
                 {employmentType?.name?.[lang]}

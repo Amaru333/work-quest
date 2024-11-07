@@ -1,0 +1,124 @@
+[
+  {
+    "_id": "5f5b3b3b1b3e3b3b3b3b3b3b",
+    "message": "Hey John Doe, how are you doing today? We have received your application and we are happy to inform you that you have been selected for the interview. Please let us know your availability for the interview.",
+    "sender": {
+      "type": "company",
+      "user": {
+        "_id": "5f5b3b3b1b3e3b3b3b3b3b3c",
+        "name": "Pineapple",
+        "slug": "pineapple",
+        "avatar": "/images/dummy-logo.png"
+      }
+    },
+    "timestamp": "2024-10-03T10:00:00.000Z"
+  },
+  {
+    "_id": "5f5b3b3b1b3e3b3b3b3b3b3d",
+    "message": "Hello Pineapple, I am doing great. Thank you for the opportunity. I am available for the interview on Monday at 10:00 AM.",
+    "sender": {
+      "type": "user",
+      "user": {
+        "_id": "5f5b3b3b1b3e3b3b3b3b3b3e",
+        "name": "John Doe",
+        "avatar": "/images/placeholder-avatar.png"
+      }
+    },
+    "timestamp": "2024-10-03T10:00:00.000Z"
+  },
+  {
+    "_id": "5f5b3b3b1b3e3b3b3b3b3b3f",
+    "message": "Hey John Doe! We have received your application and currently processing it. We will send you a mail regarding your interview process shortly. We have received your application regarding Front End Engineering role and we are happy to announce that you are shortlisted for this role. We will contact you soon regarding the information needed for your interview. Until then feel free to contact us regarding any information required. Thank you!",
+    "sender": {
+      "type": "company",
+      "user": {
+        "_id": "5f5b3b3b1b3e3b3b3b3b3b3c",
+        "name": "Pineapple",
+        "slug": "pineapple",
+        "avatar": "/images/dummy-logo.png"
+      }
+    },
+    "timestamp": "2024-10-03T10:00:00.000Z"
+  },
+  {
+    "_id": "5f5b3b3b1b3e3b3b3b3b3b3d",
+    "message": "Hello Pineapple, I am doing great. Thank you for the opportunity. I am available for the interview on Monday at 10:00 AM.",
+    "sender": {
+      "type": "user",
+      "user": {
+        "_id": "5f5b3b3b1b3e3b3b3b3b3b3e",
+        "name": "John Doe",
+        "avatar": "/images/placeholder-avatar.png"
+      }
+    },
+    "timestamp": "2024-10-03T10:00:00.000Z"
+  },
+  {
+    "_id": "5f5b3b3b1b3e3b3b3b3b3b3f",
+    "message": "Hey John Doe! We have received your application and currently processing it. We will send you a mail regarding your interview process shortly. We have received your application regarding Front End Engineering role and we are happy to announce that you are shortlisted for this role. We will contact you soon regarding the information needed for your interview. Until then feel free to contact us regarding any information required. Thank you!",
+    "sender": {
+      "type": "company",
+      "user": {
+        "_id": "5f5b3b3b1b3e3b3b3b3b3b3c",
+        "name": "Pineapple",
+        "slug": "pineapple",
+        "avatar": "/images/dummy-logo.png"
+      }
+    },
+    "timestamp": "2024-10-03T10:00:00.000Z"
+  },
+  {
+    "_id": "5f5b3b3b1b3e3b3b3b3b3b3d",
+    "message": "Hello Pineapple, I am doing great. Thank you for the opportunity. I am available for the interview on Monday at 10:00 AM.",
+    "sender": {
+      "type": "user",
+      "user": {
+        "_id": "5f5b3b3b1b3e3b3b3b3b3b3e",
+        "name": "John Doe",
+        "avatar": "/images/placeholder-avatar.png"
+      }
+    },
+    "timestamp": "2024-10-03T10:00:00.000Z"
+  },
+  {
+    "_id": "5f5b3b3b1b3e3b3b3b3b3b3f",
+    "message": "Hey John Doe! We have received your application and currently processing it. We will send you a mail regarding your interview process shortly. We have received your application regarding Front End Engineering role and we are happy to announce that you are shortlisted for this role. We will contact you soon regarding the information needed for your interview. Until then feel free to contact us regarding any information required. Thank you!",
+    "sender": {
+      "type": "company",
+      "user": {
+        "_id": "5f5b3b3b1b3e3b3b3b3b3b3c",
+        "name": "Pineapple",
+        "slug": "pineapple",
+        "avatar": "/images/dummy-logo.png"
+      }
+    },
+    "timestamp": "2024-10-03T10:00:00.000Z"
+  },
+  {
+    "_id": "5f5b3b3b1b3e3b3b3b3b3b3d",
+    "message": "Hello Pineapple, I am doing great. Thank you for the opportunity. I am available for the interview on Monday at 10:00 AM.",
+    "sender": {
+      "type": "user",
+      "user": {
+        "_id": "5f5b3b3b1b3e3b3b3b3b3b3e",
+        "name": "John Doe",
+        "avatar": "/images/placeholder-avatar.png"
+      }
+    },
+    "timestamp": "2024-10-03T10:00:00.000Z"
+  },
+  {
+    "_id": "5f5b3b3b1b3e3b3b3b3b3b3f",
+    "message": "Hey John Doe! We have received your application and currently processing it. We will send you a mail regarding your interview process shortly. We have received your application regarding Front End Engineering role and we are happy to announce that you are shortlisted for this role. We will contact you soon regarding the information needed for your interview. Until then feel free to contact us regarding any information required. Thank you!",
+    "sender": {
+      "type": "company",
+      "user": {
+        "_id": "5f5b3b3b1b3e3b3b3b3b3b3c",
+        "name": "Pineapple",
+        "slug": "pineapple",
+        "avatar": "/images/dummy-logo.png"
+      }
+    },
+    "timestamp": "2024-10-03T10:00:00.000Z"
+  }
+]
