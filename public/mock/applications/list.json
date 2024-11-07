@@ -1,0 +1,162 @@
+[
+  {
+    "_id": "5f5b3b3b1f1b5b001f1b5b00",
+    "company": {
+      "name": "Pineapple",
+      "logo": "/images/dummy-logo.png"
+    },
+    "position": {
+      "en": "Full Stack Developer",
+      "es": "Desarrollador Full Stack",
+      "fr": "Développeur Full Stack",
+      "hi": "पूर्ण स्टैक डेवलपर"
+    },
+    "status": "processing",
+    "applied_on": "2020-09-11T00:00:00.000Z",
+    "createdAt": "2024-09-28T00:00:00.000Z"
+  },
+  {
+    "_id": "5f5b3b3b1f1b5b001f1b5b01",
+    "company": {
+      "name": "Switch",
+      "logo": "/images/dummy-logo.png"
+    },
+    "position": {
+      "en": "Full Stack Developer",
+      "es": "Desarrollador Full Stack",
+      "fr": "Développeur Full Stack",
+      "hi": "पूर्ण स्टैक डेवलपर"
+    },
+    "status": "processing",
+    "applied_on": "2020-09-11T00:00:00.000Z",
+    "createdAt": "2024-09-28T00:00:00.000Z"
+  },
+  {
+    "_id": "5f5b3b3b1f1b5b001f1b5b02",
+    "company": {
+      "name": "Switch",
+      "logo": "/images/dummy-logo.png"
+    },
+    "position": {
+      "en": "Full Stack Developer",
+      "es": "Desarrollador Full Stack",
+      "fr": "Développeur Full Stack",
+      "hi": "पूर्ण स्टैक डेवलपर"
+    },
+    "status": "processing",
+    "applied_on": "2020-09-11T00:00:00.000Z",
+    "createdAt": "2024-09-28T00:00:00.000Z"
+  },
+  {
+    "_id": "5f5b3b3b1f1b5b001f1b5b03",
+    "company": {
+      "name": "Bithub",
+      "logo": "/images/dummy-logo.png"
+    },
+    "position": {
+      "en": "Full Stack Developer",
+      "es": "Desarrollador Full Stack",
+      "fr": "Développeur Full Stack",
+      "hi": "पूर्ण स्टैक डेवलपर"
+    },
+    "status": "approved",
+    "applied_on": "2020-09-11T00:00:00.000Z",
+    "createdAt": "2024-09-28T00:00:00.000Z"
+  },
+  {
+    "_id": "5f5b3b3b1f1b5b001f1b5b04",
+    "company": {
+      "name": "Bithub",
+      "logo": "/images/dummy-logo.png"
+    },
+    "position": {
+      "en": "Full Stack Developer",
+      "es": "Desarrollador Full Stack",
+      "fr": "Développeur Full Stack",
+      "hi": "पूर्ण स्टैक डेवलपर"
+    },
+    "status": "rejected",
+    "applied_on": "2020-09-11T00:00:00.000Z",
+    "createdAt": "2024-09-28T00:00:00.000Z"
+  },
+  {
+    "_id": "5f5b3b3b1f1b5b001f1b5b05",
+    "company": {
+      "name": "Pineapple",
+      "logo": "/images/dummy-logo.png"
+    },
+    "position": {
+      "en": "Full Stack Developer",
+      "es": "Desarrollador Full Stack",
+      "fr": "Développeur Full Stack",
+      "hi": "पूर्ण स्टैक डेवलपर"
+    },
+    "status": "processing",
+    "applied_on": "2020-09-11T00:00:00.000Z",
+    "createdAt": "2024-09-28T00:00:00.000Z"
+  },
+  {
+    "_id": "5f5b3b3b1f1b5b001f1b5b06",
+    "company": {
+      "name": "Pineapple",
+      "logo": "/images/dummy-logo.png"
+    },
+    "position": {
+      "en": "Full Stack Developer",
+      "es": "Desarrollador Full Stack",
+      "fr": "Développeur Full Stack",
+      "hi": "पूर्ण स्टैक डेवलपर"
+    },
+    "status": "processing",
+    "applied_on": "2020-09-11T00:00:00.000Z",
+    "createdAt": "2024-09-28T00:00:00.000Z"
+  },
+  {
+    "_id": "5f5b3b3b1f1b5b001f1b5b07",
+    "company": {
+      "name": "Switch",
+      "logo": "/images/dummy-logo.png"
+    },
+    "position": {
+      "en": "Full Stack Developer",
+      "es": "Desarrollador Full Stack",
+      "fr": "Développeur Full Stack",
+      "hi": "पूर्ण स्टैक डेवलपर"
+    },
+    "status": "saved",
+    "applied_on": "2020-09-11T00:00:00.000Z",
+    "createdAt": "2024-09-28T00:00:00.000Z"
+  },
+  {
+    "_id": "5f5b3b3b1f1b5b001f1b5b08",
+    "company": {
+      "name": "Bithub",
+      "logo": "/images/dummy-logo.png"
+    },
+    "position": {
+      "en": "Full Stack Developer",
+      "es": "Desarrollador Full Stack",
+      "fr": "Développeur Full Stack",
+      "hi": "पूर्ण स्टैक डेवलपर"
+    },
+    "status": "approved",
+    "applied_on": "2020-09-11T00:00:00.000Z",
+    "createdAt": "2024-09-28T00:00:00.000Z"
+  },
+  {
+    "_id": "5f5b3b3b1f1b5b001f1b5b09",
+    "company": {
+      "name": "Bithub",
+      "logo": "/images/dummy-logo.png"
+    },
+    "position": {
+      "en": "Full Stack Developer",
+      "es": "Desarrollador Full Stack",
+      "fr": "Développeur Full Stack",
+      "hi": "पूर्ण स्टैक डेवलपर"
+    },
+    "status": "rejected",
+    "applied_on": "2020-09-11T00:00:00.000Z",
+    "createdAt": "2024-09-28T00:00:00.000Z"
+  }
+]

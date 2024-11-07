@@ -57,3 +57,15 @@ export function getCurrencySymbol(currencyCode) {
     .replace(/\d/g, "")
     .trim();
 }
+
+/**
+ * @param {string} timestamp
+ * @returns {string} Ex: {date: "Sept 12, 2021", time: "10:30 AM"}
+ */
+export function getDateAndTime(timestamp) {
+  const date = new Date(timestamp);
+  return {
+    date: date.toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" }),
+    time: date.toLocaleTimeString("en-US", { hour: "numeric", minute: "numeric", hour12: true }),
+  };
+}

@@ -44,7 +44,7 @@ function JobCard({ job, lang }) {
           </p>
         </div>
         <div className="w-1/3">
-          <Link href={`/jobs/${job?.company?.slug}/${job?.objectID}`}>
+          <Link href={`/jobs/${job?.company?.slug}/${job?._id}`}>
             <UIButton>{COMMON_STRINGS.details[lang]}</UIButton>
           </Link>
         </div>

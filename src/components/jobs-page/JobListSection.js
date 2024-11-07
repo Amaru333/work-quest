@@ -28,7 +28,7 @@ function JobListSection() {
           ? Array(6)
               .fill("")
               .map((_, i) => <SkeletonJobCard key={i} />)
-          : jobList.length > 0 && jobList.map((job) => <JobCard key={job?.objectID} job={job} lang={lang} />)}
+          : jobList.length > 0 && jobList.map((job) => <JobCard key={job?._id} job={job} lang={lang} />)}
       </div>
     </div>
   );
