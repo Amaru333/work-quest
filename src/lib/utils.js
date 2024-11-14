@@ -16,7 +16,7 @@ export function getRelativeTime(time, lang) {
   }
   interval = Math.floor(seconds / 2592000);
   if (interval > 1) {
-    return `${interval} ${COMMON_STRINGS.months[lang]} ${COMMON_STRINGS.ago[lang]}`;
+    return `${interval} ${COMMON_STRINGS.months_string[lang]} ${COMMON_STRINGS.ago[lang]}`;
   }
   interval = Math.floor(seconds / 86400);
   if (interval > 1) {

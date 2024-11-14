@@ -13,14 +13,26 @@ const defaults = {
 const Map = (Map) => {
   const { zoom = defaults.zoom, posix, popover } = Map;
 
-  return (
-    <MapContainer center={posix} zoom={zoom} scrollWheelZoom={false} style={{ height: "100%", width: "100%", borderRadius: "1rem" }}>
-      <TileLayer attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-      <Marker position={posix} draggable={false}>
-        <Popup>{popover}</Popup>
-      </Marker>
-    </MapContainer>
-  );
+  if (posix[0] !== undefined && posix[1] !== undefined) {
+    return (
+      <MapContainer
+        center={posix}
+        zoom={zoom}
+        scrollWheelZoom={false}
+        style={{ height: "100%", width: "100%", borderRadius: "1rem" }}
+      >
+        <TileLayer
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        />
+        <Marker position={posix} draggable={false}>
+          <Popup>{popover}</Popup>
+        </Marker>
+      </MapContainer>
+    );
+  } else {
+    return null;
+  }
 };
 
 export default Map;

@@ -96,10 +96,16 @@ export const PROFILE_EDIT_PAGE_STRINGS = {
     hi: "अपलोड करने के लिए क्लिक करें",
   },
   resume: {
-    en: "resume",
+    en: "Resume",
     es: "currículum",
     fr: "CV",
     hi: "रिज्यूम",
+  },
+  resume_message: {
+    en: "Your resume will be forwarded to companies when you apply",
+    es: "Su currículum se enviará a las empresas cuando se postule",
+    fr: "Votre CV sera transmis aux entreprises lorsque vous postulez",
+    hi: "जब आप आवेदन करेंगे तो आपका रिज्यूम कंपनियों को फॉरवर्ड किया जाएगा",
   },
   education: {
     en: "Education",

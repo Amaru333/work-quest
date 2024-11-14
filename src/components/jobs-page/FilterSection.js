@@ -9,14 +9,22 @@ import { useSelector } from "react-redux";
 import { Checkbox } from "../ui/checkbox";
 import { CheckBoxSkeleton } from "./JobsSkeleton";
 
-function FilterSection() {
+function FilterSection({
+  workingScheduleFilters,
+  setWorkingScheduleFilters,
+  employmentTypeFilters,
+  setEmploymentTypeFilters,
+}) {
   const lang = useSelector(selectLanguageCode);
   const [isFilterLoading, setIsFilterLoading] = React.useState(true);
   const [filters, setFilters] = React.useState([]);
   const [employmentTypes, setEmploymentTypes] = React.useState([]);
 
   useEffect(() => {
-    Promise.all([httpRequest.get("/mock/filters.json"), httpRequest.get("/mock/employmentType.json")]).then(([filtersRes, employmentTypesRes]) => {
+    Promise.all([
+      httpRequest.get("http://localhost:3001/working-schedules/"),
+      httpRequest.get("http://localhost:3001/employment-types/"),
+    ]).then(([filtersRes, employmentTypesRes]) => {
       setFilters(filtersRes.data);
       setEmploymentTypes(employmentTypesRes.data);
       setIsFilterLoading(false);
@@ -26,7 +34,9 @@ function FilterSection() {
   return (
     <div className="col-span-3 h-full border-r border-gray-400 pt-6">
       <p className="font-semibold text-3xl mb-4">{COMMON_STRINGS.filters[lang]}</p>
-      <p className="text-sm font-semibold text-gray-400 mb-3">{JOBS_PAGE_STRINGS.workingSchedule[lang]}</p>
+      <p className="text-sm font-semibold text-gray-400 mb-3">
+        {JOBS_PAGE_STRINGS.workingSchedule[lang]}
+      </p>
       {isFilterLoading
         ? Array(5)
             .fill("")
@@ -34,13 +44,30 @@ function FilterSection() {
         : filters.length > 0 &&
           filters.map((filter) => (
             <div className="flex items-center space-x-2 mt-2" key={filter?._id}>
-              <Checkbox id={filter?.value} className="peer" />
-              <label htmlFor={filter?.value} className="text-sm font-medium text-gray-500 leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 peer-data-[state=checked]:text-primary-100 peer-data-[state=checked]:font-semibold">
+              <Checkbox
+                id={filter?.value}
+                className="peer"
+                onCheckedChange={(value) => {
+                  if (value) {
+                    setWorkingScheduleFilters([...workingScheduleFilters, filter?.name?.[lang]]);
+                  } else {
+                    setWorkingScheduleFilters(
+                      workingScheduleFilters.filter((f) => f !== filter?.name?.[lang])
+                    );
+                  }
+                }}
+              />
+              <label
+                htmlFor={filter?.value}
+                className="text-sm font-medium text-gray-500 leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 peer-data-[state=checked]:text-primary-100 peer-data-[state=checked]:font-semibold"
+              >
                 {filter?.name?.[lang]}
               </label>
             </div>
           ))}
-      <p className="text-sm font-semibold text-gray-400 mt-4 mb-3">{JOBS_PAGE_STRINGS.employmentType[lang]}</p>
+      <p className="text-sm font-semibold text-gray-400 mt-4 mb-3">
+        {JOBS_PAGE_STRINGS.employmentType[lang]}
+      </p>
       {isFilterLoading
         ? Array(3)
             .fill("")
@@ -48,8 +75,26 @@ function FilterSection() {
         : employmentTypes.length > 0 &&
           employmentTypes.map((employmentType) => (
             <div className="flex items-center space-x-2 mt-2" key={employmentType?._id}>
-              <Checkbox id={employmentType?.value} className="peer" />
-              <label htmlFor={employmentType?.value} className="text-sm font-medium text-gray-500 leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 peer-data-[state=checked]:text-primary-100 peer-data-[state=checked]:font-semibold">
+              <Checkbox
+                id={employmentType?.value}
+                className="peer"
+                onCheckedChange={(value) => {
+                  if (value) {
+                    setEmploymentTypeFilters([
+                      ...employmentTypeFilters,
+                      employmentType?.name?.[lang],
+                    ]);
+                  } else {
+                    setEmploymentTypeFilters(
+                      employmentTypeFilters.filter((f) => f !== employmentType?.name?.[lang])
+                    );
+                  }
+                }}
+              />
+              <label
+                htmlFor={employmentType?.value}
+                className="text-sm font-medium text-gray-500 leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 peer-data-[state=checked]:text-primary-100 peer-data-[state=checked]:font-semibold"
+              >
                 {employmentType?.name?.[lang]}
               </label>
             </div>

@@ -7,20 +7,22 @@ import JobDescriptionSection from "./JobDescriptionSection";
 import { useSelector } from "react-redux";
 import { selectLanguageCode } from "@/redux/slices/languageSlice";
 import JobLocation from "./JobLocation";
+import { getUserDetails } from "@/redux/slices/userSlice";
 
 function IndividualJobPage() {
   const { jobSlug } = useParams();
+  const userDetails = useSelector(getUserDetails);
   const lang = useSelector(selectLanguageCode);
 
   const [jobDetails, setJobDetails] = useState(null);
 
-  console.log(jobDetails);
-
   useEffect(() => {
-    httpRequest.get(`/mock/jobs/${jobSlug}.json`).then((res) => {
-      setJobDetails(res.data);
-    });
-  }, []);
+    httpRequest
+      .get(`http://localhost:3001/jobs/${jobSlug}/${userDetails?._id || `guest`}`)
+      .then((res) => {
+        setJobDetails(res.data);
+      });
+  }, [jobSlug, userDetails?._id]);
 
   return (
     <div className="max-w-screen-2xl mx-auto grid grid-cols-12 px-8 2xl:px-0 py-12">

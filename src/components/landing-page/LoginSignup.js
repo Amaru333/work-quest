@@ -5,18 +5,85 @@ import UISeparation from "@/widgets/UISeparation";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Checkbox } from "../ui/checkbox";
+
+import { signIn, useSession } from "next-auth/react";
+import httpRequest from "@/lib/httpRequest";
+import { useDispatch, useSelector } from "react-redux";
+import { getUserDetails, setUser } from "@/redux/slices/userSlice";
+import { Bounce, toast } from "react-toastify";
 
 function LoginSignup({ lang, status, setStatus }) {
   const router = useRouter();
+  const dispatch = useDispatch();
+  const { data: session } = useSession();
 
-  const onSignUp = () => {
+  const userDetails = useSelector(getUserDetails);
+
+  const [loginData, setLoginData] = useState({
+    email: "",
+    password: "",
+  });
+
+  const navigateToDashboard = () => {
     router.push("/jobs");
   };
 
+  useEffect(() => {
+    if (session && !userDetails?.details) {
+      httpRequest
+        .post("http://localhost:3001/users", {
+          name: session?.user?.name,
+          email: session?.user?.email,
+          avatar: session?.user?.image,
+          mode: "social",
+        })
+        .then((res) => {
+          dispatch(setUser(res.data));
+          navigateToDashboard();
+        });
+    }
+  }, [session]);
+
   const onSignIn = () => {
+    httpRequest.post("http://localhost:3001/users", loginData).then((res) => {
+      dispatch(setUser(res.data));
+      navigateToDashboard();
+    });
+    toast.success(COMMON_STRINGS.logged_in_message, {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "colored",
+      transition: Bounce,
+    });
     router.push("/jobs");
+  };
+
+  const onSignUp = () => {
+    httpRequest
+      .post("http://localhost:3001/users/register", loginData)
+      .then((res) => {
+        toast.success(COMMON_STRINGS.registration_success_message, {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+          transition: Bounce,
+        });
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
 
   return (
@@ -30,36 +97,44 @@ function LoginSignup({ lang, status, setStatus }) {
         <label htmlFor="email" className="block font-semibold text-sm text-gray-500">
           {COMMON_STRINGS.email[lang]}
         </label>
-        <input type="email" id="email" name="email" className="mt-1 block w-full px-3 py-2 border border-gray-500 rounded-md shadow-sm focus:ring-primary-100 focus:border-primary-100 sm:text-sm" />
+        <input
+          value={loginData.email}
+          onChange={(e) => setLoginData({ ...loginData, email: e.target.value })}
+          type="email"
+          id="email"
+          name="email"
+          className="mt-1 block w-full px-3 py-2 border border-gray-500 rounded-md shadow-sm focus:ring-primary-100 focus:border-primary-100 sm:text-sm"
+        />
         <label htmlFor="password" className="block font-semibold text-sm text-gray-500 mt-4">
           {COMMON_STRINGS.password[lang]}
         </label>
-        <input type="password" id="password" name="password" className="mt-1 block w-full px-3 py-2 border border-gray-500 rounded-md shadow-sm focus:ring-primary-100 focus:border-primary-100 sm:text-sm" />
+        <input
+          value={loginData.password}
+          onChange={(e) => setLoginData({ ...loginData, password: e.target.value })}
+          type="password"
+          id="password"
+          name="password"
+          className="mt-1 block w-full px-3 py-2 border border-gray-500 rounded-md shadow-sm focus:ring-primary-100 focus:border-primary-100 sm:text-sm"
+        />
         <div className="mt-4 flex items-center justify-between">
-          {/* <div className="flex items-start">
-            <input type="checkbox" id="remember-me" name="remember-me" className="mt-0.5" />
-            <label htmlFor="remember-me" className="ml-1 text-sm font-semibold text-gray-500">
-              {COMMON_STRINGS.rememberMe[lang]}
-            </label>
-          </div> */}
           <div className="flex items-center space-x-2">
             <Checkbox id="remember-me" />
-            <label htmlFor="remember-me" className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
+            <label
+              htmlFor="remember-me"
+              className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+            >
               {COMMON_STRINGS.rememberMe[lang]}
             </label>
           </div>
           <Link href="/forgot-password">
-            <p className="text-sm font-semibold text-primary-100">{COMMON_STRINGS.forgotPassword[lang]}</p>
+            <p className="text-sm font-semibold text-primary-100">
+              {COMMON_STRINGS.forgotPassword[lang]}
+            </p>
           </Link>
         </div>
 
         {status === "signup" ? (
-          <UIButton
-            onClick={() => {
-              onSignUp();
-            }}
-            className="mt-4"
-          >
+          <UIButton onClick={onSignUp} className="mt-4">
             {COMMON_STRINGS.signUp[lang]}
           </UIButton>
         ) : (
@@ -70,7 +145,7 @@ function LoginSignup({ lang, status, setStatus }) {
 
         <UISeparation className="mt-4" text={COMMON_STRINGS.or[lang]} />
         <div className="w-full flex justify-center items-center gap-x-8 mt-4">
-          <button>
+          <button onClick={() => signIn("google")}>
             <Image src="/icons/google.svg" width={32} height={32} alt="google" />
           </button>
           <button>

@@ -107,7 +107,7 @@ export const COMMON_STRINGS = {
     fr: "ans",
     hi: "साल",
   },
-  months: {
+  months_string: {
     en: "months",
     es: "meses",
     fr: "mois",
@@ -282,5 +282,35 @@ export const COMMON_STRINGS = {
       fr: "Décembre",
       hi: "दिसंबर",
     },
+  },
+  yes: {
+    en: "Yes",
+    es: "Sí",
+    fr: "Oui",
+    hi: "हां",
+  },
+  no: {
+    en: "No",
+    es: "No",
+    fr: "Non",
+    hi: "नहीं",
+  },
+  logged_out_message: {
+    en: "You have been logged out",
+    es: "Has cerrado sesión",
+    fr: "Vous avez été déconnecté",
+    hi: "आप लॉग आउट हो गए हैं",
+  },
+  logged_in_message: {
+    en: "You have been logged in",
+    es: "Has iniciado sesión",
+    fr: "Vous avez été connecté",
+    hi: "आप लॉग इन हो गए हैं",
+  },
+  registration_success_message: {
+    en: "Registration successful, please login to continue",
+    es: "Registro exitoso, inicie sesión para continuar",
+    fr: "Inscription réussie, veuillez vous connecter pour continuer",
+    hi: "पंजीकरण सफल, कृपया जारी रखने के लिए लॉगिन करें",
   },
 };

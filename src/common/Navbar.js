@@ -1,8 +1,19 @@
 "use client";
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
-import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 
 import { NAVBAR_CONSTANTS } from "@/constants/navbarConstants";
 import { COMMON_STRINGS } from "@/constants/strings/commonStrings";
@@ -13,28 +24,57 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { LANGUAGE_LIST } from "@/constants/languages";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
+import { getUserDetails } from "@/redux/slices/userSlice";
+import { getNameInitialsInUpperCase } from "@/functions/extraFunctions";
+import { signOut } from "next-auth/react";
+import { Bounce, toast } from "react-toastify";
 
 function Navbar() {
   const dispatch = useDispatch();
   const pathname = usePathname();
+  const router = useRouter();
   const { code: lang } = useSelector(selectedLanguage);
+  const userData = useSelector(getUserDetails);
 
   const [isLanguageModalOpen, setIsLanguageModalOpen] = React.useState(false);
+  const [queryParam, setQueryParam] = React.useState("");
 
   const profileSettingsOptions = [
-    { name: COMMON_STRINGS.profile, action: () => {} },
-    { name: COMMON_STRINGS.settings, action: () => {} },
+    { name: COMMON_STRINGS.profile, action: () => {}, visible: userData !== null },
+    {
+      name: COMMON_STRINGS.settings,
+      action: () => {
+        router.push("/profile/edit");
+      },
+      visible: userData !== null,
+    },
     {
       name: COMMON_STRINGS.changeLanguage,
       action: () => {
         setIsLanguageModalOpen(true);
       },
+      visible: true,
     },
   ];
 
   const dispatchLanguage = (language) => {
     dispatch(setLanguage(language));
+  };
+
+  const logout = () => {
+    signOut();
+    toast.success(COMMON_STRINGS.logged_out_message, {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "colored",
+      transition: Bounce,
+    });
   };
 
   return (
@@ -50,16 +90,40 @@ function Navbar() {
         <div className="flex gap-x-6 font-medium">
           {NAVBAR_CONSTANTS.map((item, index) => (
             <div className="flex flex-col relative" key={index}>
-              <Link href={item.link} key={index} className="text-white">
-                {item.name[lang]}
-              </Link>
-              {pathname.includes(item.link) && <div className="w-full h-0.5 rounded-full bg-white absolute -bottom-4 left-0"></div>}
+              {item.link === "/jobs" ? (
+                <Link href={item.link} key={index} className="text-white">
+                  {item.name[lang]}
+                </Link>
+              ) : userData ? (
+                <Link href={item.link} key={index} className="text-white">
+                  {item.name[lang]}
+                </Link>
+              ) : (
+                <p className="text-white opacity-30 cursor-default">{item.name[lang]}</p>
+              )}
+              {pathname.includes(item.link) && (
+                <div className="w-full h-0.5 rounded-full bg-white absolute -bottom-4 left-0"></div>
+              )}
             </div>
           ))}
         </div>
         <div className="flex bg-background rounded-full w-2/5">
-          <input type="text" placeholder={COMMON_STRINGS.searchJobs[lang]} className="bg-background w-full py-3 px-4 rounded-full !outline-none" />
-          <button className="px-4">
+          <input
+            type="text"
+            placeholder={COMMON_STRINGS.searchJobs[lang]}
+            className="bg-background w-full py-3 px-4 rounded-full !outline-none"
+            value={queryParam}
+            onChange={(e) => {
+              setQueryParam(e.target.value);
+              router.push(`/jobs?query=${e.target.value}`);
+            }}
+          />
+          <button
+            className="px-4"
+            onClick={() => {
+              router.push(`/jobs?query=${queryParam}`);
+            }}
+          >
             <Image src="/icons/search.svg" width={16} height={16} alt="search" />
           </button>
         </div>
@@ -72,7 +136,9 @@ function Navbar() {
                 {LANGUAGE_LIST.map((language) => (
                   <div
                     key={language.code}
-                    className={`w-full text-left py-3 px-6 text-black hover:bg-gray-200 transition-all duration-200 cursor-pointer rounded-lg ${language.code === lang ? "bg-gray-200" : "bg-white"}`}
+                    className={`w-full text-left py-3 px-6 text-black hover:bg-gray-200 transition-all duration-200 cursor-pointer rounded-lg ${
+                      language.code === lang ? "bg-gray-200" : "bg-white"
+                    }`}
                     onClick={() => {
                       dispatchLanguage(language);
                       setIsLanguageModalOpen(false);
@@ -90,20 +156,40 @@ function Navbar() {
           <DropdownMenu>
             <DropdownMenuTrigger className="text-primary-100 flex items-center">
               <Avatar className="w-12 h-12">
-                <AvatarImage src="/images/placeholder-avatar.png" />
-                <AvatarFallback>CN</AvatarFallback>
+                <AvatarImage src={userData?.avatar || "/images/default-avatar.jpg"} />
+                <AvatarFallback>{getNameInitialsInUpperCase(userData?.name)}</AvatarFallback>
               </Avatar>
             </DropdownMenuTrigger>
             <DropdownMenuContent className="bg-primary-300 text-white px-0 py-0">
               {profileSettingsOptions.map((option, index) => (
-                <DropdownMenuItem key={index} className={`w-full text-left py-3 px-6 hover:bg-primary-200 transition-all duration-200 cursor-pointer bg-primary-300 font-medium`} onClick={option.action}>
-                  {option.name[lang]}
-                </DropdownMenuItem>
+                <>
+                  {option.visible && (
+                    <DropdownMenuItem
+                      key={index}
+                      className={`w-full text-left py-3 px-6 hover:bg-primary-200 transition-all duration-200 cursor-pointer bg-primary-300 font-medium`}
+                      onClick={option.action}
+                    >
+                      {option.name[lang]}
+                    </DropdownMenuItem>
+                  )}
+                </>
               ))}
               <UISeparation color="primary-100" className="px-2" />
-              <DropdownMenuItem className={`w-full text-left py-3 px-6 hover:bg-primary-200 transition-all duration-200 cursor-pointer bg-primary-300 font-medium`} onClick={() => {}}>
-                {COMMON_STRINGS.signOut[lang]}
-              </DropdownMenuItem>
+              {userData !== null ? (
+                <DropdownMenuItem
+                  className={`w-full text-left py-3 px-6 hover:bg-primary-200 transition-all duration-200 cursor-pointer bg-primary-300 font-medium`}
+                  onClick={logout}
+                >
+                  {COMMON_STRINGS.signOut[lang]}
+                </DropdownMenuItem>
+              ) : (
+                <DropdownMenuItem
+                  className={`w-full text-left py-3 px-6 hover:bg-primary-200 transition-all duration-200 cursor-pointer bg-primary-300 font-medium`}
+                  onClick={() => router.push("/")}
+                >
+                  {COMMON_STRINGS.signIn[lang]}
+                </DropdownMenuItem>
+              )}
             </DropdownMenuContent>
           </DropdownMenu>
 

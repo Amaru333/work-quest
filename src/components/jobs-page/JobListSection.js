@@ -7,28 +7,59 @@ import { useSelector } from "react-redux";
 import JobCard from "./JobCard";
 import httpRequest from "@/lib/httpRequest";
 import { SkeletonJobCard } from "./JobsSkeleton";
+import { useSearchParams } from "next/navigation";
 
-function JobListSection() {
+function JobListSection({ workingScheduleFilters, employmentTypeFilters }) {
   const lang = useSelector(selectLanguageCode);
+  const searchParams = useSearchParams();
+  const query = searchParams.get("query");
 
   const [jobList, setJobList] = React.useState([]);
   const [isJobListLoading, setIsJobListLoading] = React.useState(true);
 
   useEffect(() => {
-    httpRequest.get("/mock/jobs.json").then((res) => {
+    httpRequest.get("http://localhost:3001/jobs/").then((res) => {
       setJobList(res.data);
       setIsJobListLoading(false);
     });
   }, []);
+
+  const queriedJobs = query
+    ? jobList.filter(
+        (job) =>
+          job?.title?.[lang]?.toLowerCase().includes(query?.toLowerCase()) ||
+          job?.company?.name?.toLowerCase().includes(query?.toLowerCase())
+      )
+    : jobList;
+  const filteredJobs = queriedJobs.filter((job) => {
+    // Check for empty filters (i.e., no filtering applied)
+    if (workingScheduleFilters.length === 0 && employmentTypeFilters.length === 0) {
+      return true;
+    }
+
+    // Apply filters if they have values
+    const matchesWorkingSchedule =
+      workingScheduleFilters.length === 0 ||
+      workingScheduleFilters.includes(job?.workingSchedule?.name?.[lang]);
+
+    const matchesEmploymentType =
+      employmentTypeFilters.length === 0 ||
+      employmentTypeFilters.includes(job?.employmentType?.name?.[lang]);
+
+    // Return true only if both match criteria are met
+    return matchesWorkingSchedule && matchesEmploymentType;
+  });
+
   return (
     <div className="col-span-9 pt-6">
       <p className="font-semibold text-3xl mb-4">{JOBS_PAGE_STRINGS.recommendedJobs[lang]}</p>
-      <div className="grid grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {isJobListLoading
           ? Array(6)
               .fill("")
               .map((_, i) => <SkeletonJobCard key={i} />)
-          : jobList.length > 0 && jobList.map((job) => <JobCard key={job?._id} job={job} lang={lang} />)}
+          : filteredJobs.length > 0 &&
+            filteredJobs.map((job) => <JobCard key={job?._id} job={job} lang={lang} />)}
       </div>
     </div>
   );

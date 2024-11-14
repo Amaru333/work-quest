@@ -83,4 +83,22 @@ export const JOB_DESCRIPTION_PAGE_STRINGS = {
     fr: "Enregistrer pour plus tard",
     hi: "बाद में सुरक्षित करें",
   },
+  apply_to_job: {
+    en: "Apply to the job right now?",
+    es: "¿Aplicar al trabajo ahora mismo?",
+    fr: "Postuler à l'emploi dès maintenant?",
+    hi: "अभी नौकरी के लिए आवेदन करें?",
+  },
+  apply_message: {
+    en: "Your application will be sent directly to the employer.",
+    es: "Su solicitud se enviará directamente al empleador.",
+    fr: "Votre candidature sera envoyée directement à l'employeur.",
+    hi: "आपका आवेदन सीधे नियोक्ता को भेजा जाएगा।",
+  },
+  applied_on: {
+    en: "Applied on",
+    es: "Aplicado en",
+    fr: "Appliqué le",
+    hi: "पर लागू किया गया",
+  },
 };
