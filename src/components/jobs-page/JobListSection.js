@@ -31,13 +31,12 @@ function JobListSection({ workingScheduleFilters, employmentTypeFilters }) {
           job?.company?.name?.toLowerCase().includes(query?.toLowerCase())
       )
     : jobList;
+
   const filteredJobs = queriedJobs.filter((job) => {
-    // Check for empty filters (i.e., no filtering applied)
     if (workingScheduleFilters.length === 0 && employmentTypeFilters.length === 0) {
       return true;
     }
 
-    // Apply filters if they have values
     const matchesWorkingSchedule =
       workingScheduleFilters.length === 0 ||
       workingScheduleFilters.includes(job?.workingSchedule?.name?.[lang]);
@@ -46,14 +45,13 @@ function JobListSection({ workingScheduleFilters, employmentTypeFilters }) {
       employmentTypeFilters.length === 0 ||
       employmentTypeFilters.includes(job?.employmentType?.name?.[lang]);
 
-    // Return true only if both match criteria are met
     return matchesWorkingSchedule && matchesEmploymentType;
   });
 
   return (
-    <div className="col-span-9 pt-6">
+    <div className="col-span-12 md:col-span-9 pt-6">
       <p className="font-semibold text-3xl mb-4">{JOBS_PAGE_STRINGS.recommendedJobs[lang]}</p>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
         {isJobListLoading
           ? Array(6)
               .fill("")

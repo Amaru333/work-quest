@@ -53,4 +53,10 @@ export const MY_APPLICATIONS_PAGE_STRINGS = {
     fr: "Nous avons le regret de vous informer que votre demande pour le poste de <strong>{role}</strong> chez <strong>{company}</strong> a été rejetée. Nous apprécions votre intérêt pour notre entreprise et vous souhaitons le meilleur dans vos projets futurs. Si vous avez des questions ou souhaitez obtenir des commentaires sur votre demande, n'hésitez pas à contacter notre équipe de support.",
     hi: "हमें आपको सूचित करने का दुःख है कि आपका आवेदन <strong>{company}</strong> में <strong>{role}</strong> के पद के लिए अस्वीकृत किया गया है। हम आपके हमारी कंपनी में रुचि और आपके भविष्य के प्रयासों में शुभकामनाएं करते हैं। यदि आपके पास कोई प्रश्न हैं या आपके आवेदन पर प्रतिक्रिया प्राप्त करना चाहते हैं, तो कृपया हमारी समर्थन टीम से संपर्क करें।",
   },
+  noApplications: {
+    en: "You have not submitted any applications yet.",
+    es: "Aún no ha enviado ninguna solicitud.",
+    fr: "Vous n'avez pas encore soumis de candidature.",
+    hi: "आपने अभी तक कोई आवेदन नहीं जमा किए हैं।",
+  },
 };

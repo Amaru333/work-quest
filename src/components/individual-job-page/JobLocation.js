@@ -10,8 +10,10 @@ import { COMMON_STRINGS } from "@/constants/strings/commonStrings";
 import httpRequest from "@/lib/httpRequest";
 import { getUserDetails } from "@/redux/slices/userSlice";
 import { useSelector } from "react-redux";
+import { useRouter } from "next/navigation";
 
 function JobLocation({ jobDetails, lang }) {
+  const router = useRouter();
   const Map = useMemo(
     () =>
       dynamic(() => import("@/widgets/UIMap"), {
@@ -30,6 +32,7 @@ function JobLocation({ jobDetails, lang }) {
       user: userDetails._id,
     });
     setIsApplyModalOpen(false);
+    router.push("/applications");
   };
 
   const saveApplication = () => {
@@ -38,6 +41,7 @@ function JobLocation({ jobDetails, lang }) {
       user: userDetails,
       status: "saved",
     });
+    router.push("/applications");
   };
   return (
     <div className="col-span-4 ml-8">
@@ -132,30 +136,35 @@ function JobLocation({ jobDetails, lang }) {
             popover={jobDetails?.company?.name}
           />
         </div>
-        {jobDetails?.appliedDate === null && jobDetails?.status !== "saved" ? (
-          <div className="flex gap-x-4">
-            <UIButton onClick={() => setIsApplyModalOpen(true)}>
-              {JOB_DESCRIPTION_PAGE_STRINGS.applyNow[lang]}
-            </UIButton>
-            <UIButton theme="secondary" onClick={saveApplication}>
-              {JOB_DESCRIPTION_PAGE_STRINGS.saveForLater[lang]}
-            </UIButton>
-          </div>
-        ) : (
+        {userDetails && (
           <>
-            {jobDetails?.status == "saved" ? (
-              <UIButton onClick={() => setIsApplyModalOpen(true)}>
-                {JOB_DESCRIPTION_PAGE_STRINGS.applyNow[lang]}
-              </UIButton>
+            {jobDetails?.appliedDate === null && jobDetails?.status !== "saved" ? (
+              <div className="flex gap-x-4">
+                <UIButton onClick={() => setIsApplyModalOpen(true)}>
+                  {JOB_DESCRIPTION_PAGE_STRINGS.applyNow[lang]}
+                </UIButton>
+                <UIButton theme="secondary" onClick={saveApplication}>
+                  {JOB_DESCRIPTION_PAGE_STRINGS.saveForLater[lang]}
+                </UIButton>
+              </div>
             ) : (
-              <UIButton disabled>
-                {JOB_DESCRIPTION_PAGE_STRINGS.applied_on[lang] +
-                  " " +
-                  getDateAndTime(jobDetails?.appliedDate).date}
-              </UIButton>
+              <>
+                {jobDetails?.status == "saved" ? (
+                  <UIButton onClick={() => setIsApplyModalOpen(true)}>
+                    {JOB_DESCRIPTION_PAGE_STRINGS.applyNow[lang]}
+                  </UIButton>
+                ) : (
+                  <UIButton disabled>
+                    {JOB_DESCRIPTION_PAGE_STRINGS.applied_on[lang] +
+                      " " +
+                      getDateAndTime(jobDetails?.appliedDate).date}
+                  </UIButton>
+                )}
+              </>
             )}
           </>
         )}
+        {!userDetails && <UIButton disabled>Login to apply for this job</UIButton>}
       </div>
     </div>
   );

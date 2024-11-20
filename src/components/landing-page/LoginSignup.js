@@ -47,22 +47,37 @@ function LoginSignup({ lang, status, setStatus }) {
   }, [session]);
 
   const onSignIn = () => {
-    httpRequest.post("http://localhost:3001/users", loginData).then((res) => {
-      dispatch(setUser(res.data));
-      navigateToDashboard();
-    });
-    toast.success(COMMON_STRINGS.logged_in_message, {
-      position: "top-right",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "colored",
-      transition: Bounce,
-    });
-    router.push("/jobs");
+    httpRequest
+      .post("http://localhost:3001/users", loginData)
+      .then((res) => {
+        dispatch(setUser(res.data));
+        navigateToDashboard();
+        toast.success(COMMON_STRINGS.logged_in_message, {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+          transition: Bounce,
+        });
+      })
+      .catch((err) => {
+        console.log(err, "ERR");
+        toast.error(COMMON_STRINGS.invalid_credentials_message, {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+          transition: Bounce,
+        });
+      });
   };
 
   const onSignUp = () => {
@@ -87,7 +102,7 @@ function LoginSignup({ lang, status, setStatus }) {
   };
 
   return (
-    <div className="col-span-6 h-full flex flex-col justify-between">
+    <div className="md:col-span-6 col-span-12 h-full flex flex-col justify-between">
       <div className="font-semibold text-5xl flex flex-col gap-y-4">
         <p>{LANDING_PAGE_STRINGS.title1[lang]}</p>
         <p>{LANDING_PAGE_STRINGS.title2[lang]}</p>
@@ -148,12 +163,12 @@ function LoginSignup({ lang, status, setStatus }) {
           <button onClick={() => signIn("google")}>
             <Image src="/icons/google.svg" width={32} height={32} alt="google" />
           </button>
-          <button>
+          {/* <button>
             <Image src="/icons/github.svg" width={32} height={32} alt="google" />
           </button>
           <button>
             <Image src="/icons/facebook.svg" width={32} height={32} alt="google" />
-          </button>
+          </button> */}
         </div>
 
         <p className="text-gray-600 font-medium text-center text-sm mt-6">
@@ -176,7 +191,9 @@ function LoginSignup({ lang, status, setStatus }) {
       </div>
       <div className="flex items-center justify-center gap-x-4 max-w-xl">
         <p className="w-fit">{LANDING_PAGE_STRINGS.guestMessage[lang]}</p>
-        <UIButton className="w-1/2">{LANDING_PAGE_STRINGS.continueAsGuest[lang]}</UIButton>
+        <UIButton className="w-1/2" onClick={navigateToDashboard}>
+          {LANDING_PAGE_STRINGS.continueAsGuest[lang]}
+        </UIButton>
       </div>
     </div>
   );
